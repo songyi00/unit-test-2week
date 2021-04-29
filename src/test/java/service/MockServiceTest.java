@@ -71,7 +71,7 @@ public class MockServiceTest {
         champion.setPosition("미드");
         champion.setHasSkinCount(3);
 
-        verify(champion,times(1)).setPosition("탑");
+        verify(champion,times(1)).setPosition("미");
     }
 
     // 4. champion 객체의 크기를 검증하는 로직이 1번 실행되었는지 테스트 하세요.
@@ -134,7 +134,7 @@ public class MockServiceTest {
     public void shouldPassNotSetName(){
         Champion champion = mock(Champion.class);
 
-        champion.setName("티모");
+        //champion.setName("티모");
         champion.setPosition("탑");
         champion.setHasSkinCount(3);
 
