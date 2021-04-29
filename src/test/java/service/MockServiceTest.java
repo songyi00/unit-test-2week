@@ -60,7 +60,7 @@ public class MockServiceTest {
     public void shouldDoThrowExceptionWhenChampionSetNameYasuo(){
         Champion champion = mock(Champion.class);
         doThrow(new IllegalArgumentException()).when(champion).setName("야스오");
-        champion.setName("야스");
+        champion.setName("야스오");
     }
 
     // 3. verify 를 사용하여 '미드' 포지션을 저장하는 프로세스가 진행되었는지 테스트 하세요.
@@ -71,7 +71,7 @@ public class MockServiceTest {
         champion.setPosition("미드");
         champion.setHasSkinCount(3);
 
-        verify(champion,times(1)).setPosition("미");
+        verify(champion,times(1)).setPosition("미드");
     }
 
     // 4. champion 객체의 크기를 검증하는 로직이 1번 실행되었는지 테스트 하세요.
